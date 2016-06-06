@@ -1,0 +1,12 @@
+%h1 New Expense
+
+= form_for @expense do |f|
+  .field
+    = f.label :amount
+    %br/
+    = f.text_field :amount
+  .field
+    = f.label :desc, "Description"
+    %br/
+    = f.text_field :desc
+  .actions= f.submit "Create"

@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to login_url, alert: "Please login to continue." if current_user.nil?
   end
+  
+  def super_admin
+    @super_admin ||= User.where(id: session[:user_id], admin: true) if session[:user_id]
+  end
+  helper_method :super_admin
 end
