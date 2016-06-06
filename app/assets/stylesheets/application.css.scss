@@ -1,0 +1,63 @@
+@import "foundation_and_overrides";
+
+form {
+  input[type="text"], input[type="password"] {
+    width:300px;
+  }
+}
+
+.flashing_messages {
+  position:fixed;
+  bottom:6%;
+  left:6%;
+  width:28%;
+  z-index:10000404041;
+  display:none;
+  .flash_message {
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #c09853;
+    margin:auto;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    opacity:.9;
+    padding-right:20px;
+    border:1px solid;
+  }
+  .notice_message {
+    background-color: #43AC6A;
+    border-color: #3a945b;
+    color: #FFFFFF;
+    font-size:18px;
+  }
+  .alert_message {
+    background-color:#f04124;
+    border-color:#de2d0f;
+    color: #FFFFFF;
+    font-size:18px;
+    border-radius:20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+  }
+  .remove_flash {
+    position:absolute;
+    right:0px;
+    vertical-align:middle;
+    padding-right:20px;
+    padding-left:40px;
+    font-size:30px;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor:pointer;
+    display:none;
+  }
+}
